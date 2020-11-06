@@ -9,21 +9,45 @@
     <meta property="og:image" content="https://jobtalle.com/KoiShape/preview.png"/>
     <title>Koi shape formula</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+            crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
 </head>
 <body>
 <div id="wrapper">
     <div id="content">
+        <div id="formula">
+            $$radius=cos(\pi\cdot(x^c-\frac{1}{2}))^r$$
+        </div>
         <canvas width="500" height="300" id="renderer"></canvas>
         <div id="controls">
             <label>
+                Length:
+                <input type="range" min="0.5" max="0.95" value="0.8" step="0.01" id="var-length">
+                <input readonly type="text" id="field-length" value="0.8">
+            </label>
+            <label>
+                Radius:
+                <input type="range" min="0.3" max="1" value="0.6" step="0.01" id="var-radius">
+                <input readonly type="text" id="field-radius" value="0.6">
+            </label>
+            <label>
                 Thickness:
-                <input type="range" min="0" max="1" value="0.5" step="0.01" id="var-thickness">
-                <input readonly type="text" id="field-thickness" value="0.5">
+                <input type="range" min="0.5" max="1.6" value="0.95" step="0.01" id="var-radius-power">
+                <input readonly type="text" id="field-radius-power" value="0.95">
             </label>
             <label>
                 Center:
-                <input type="range" min="0" max="1" value="0.5" step="0.01" id="var-center">
-                <input readonly type="text" id="field-center" value="0.5">
+                <input type="range" min="0.4" max="1" value="0.75" step="0.01" id="var-center-power">
+                <input readonly type="text" id="field-center-power" value="0.75">
+            </label>
+            <label>
+                Eye:
+                <input type="range" min="0.07" max="0.115" value="0.09" step="0.001" id="var-eye">
+                <input readonly type="text" id="field-eye" value="0.09">
             </label>
         </div>
     </div>
