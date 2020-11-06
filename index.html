@@ -12,7 +12,22 @@
 </head>
 <body>
 <div id="wrapper">
-
+    <div id="content">
+        <canvas width="500" height="300" id="renderer"></canvas>
+        <div id="controls">
+            <label>
+                Thickness:
+                <input type="range" min="0" max="1" value="0.5" step="0.01" id="var-thickness">
+                <input readonly type="text" id="field-thickness" value="0.5">
+            </label>
+            <label>
+                Center:
+                <input type="range" min="0" max="1" value="0.5" step="0.01" id="var-center">
+                <input readonly type="text" id="field-center" value="0.5">
+            </label>
+        </div>
+    </div>
 </div>
+<script src="js/main.js"></script>
 </body>
 </html>
